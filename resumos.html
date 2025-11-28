@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PlenAula - Resumos</title>
+  <style>
+    :root{
+      --app-blue:#1565D8;
+      --button-blue:#0f5fc4;
+      --card-bg: rgba(255,255,255,0.06);
+      --white:#ffffff;
+      --radius:14px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: linear-gradient(180deg, var(--app-blue), #0b4ea0);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      padding:28px 16px;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 8px 30px rgba(4,22,63,0.35);
+      backdrop-filter: blur(6px);
+    }
+    header{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+    .logo{
+      width:72px;height:72px;border-radius:12px;background:var(--white);display:flex;align-items:center;justify-content:center;color:var(--app-blue);font-weight:800;font-size:16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      text-align:center;
+      line-height:1;
+    }
+    h1{font-size:22px;margin:0}
+    p.lead{margin:4px 0 0 0;font-size:14px;opacity:0.95}
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap:12px;
+      margin-top:16px;
+    }
+    .btn{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:6px;
+      padding:18px;
+      border-radius:12px;
+      text-decoration:none;
+      color:var(--white);
+      background: linear-gradient(180deg,var(--button-blue), #084f9f);
+      font-weight:700;
+      box-shadow: 0 6px 20px rgba(4,22,63,0.28);
+      transition: transform .12s ease, box-shadow .12s ease;
+      min-height:92px;
+    }
+    .btn small{font-weight:600;opacity:0.92;font-size:13px}
+    .btn:hover{transform:translateY(-4px)}
+    .actions{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+    .ghost{
+      background:transparent;border:1px solid rgba(255,255,255,0.12);padding:10px 12px;border-radius:10px;color:var(--white);text-decoration:none;font-weight:700;font-size:14px
+    }
+
+    footer{margin-top:14px;font-size:12px;opacity:0.9}
+
+    @media (max-width:420px){
+      .logo{width:56px;height:56px;font-size:14px}
+      .btn{min-height:80px;padding:12px}
+      h1{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="main-title">
+    <header>
+      <div class="logo" aria-hidden="true">
+        PlenAula<br><span style="font-size:10px">Concursos</span>
+      </div>
+      <div>
+        <h1 id="main-title">PlenAula - Resumos Profissionais</h1>
+        <p class="lead">Biblioteca de resumos ampliados, com esquemas e gráficos ilustrativos para revisão intensiva.</p>
+      </div>
+    </header>
+
+    <nav aria-label="Índice">
+      <div class="grid">
+        <a class="btn" href="maria-da-penha.html" aria-label="Lei Maria da Penha - resumo">
+          <span>Lei Maria da Penha</span>
+          <small>Proteção à mulher — medidas, procedimentos e jurisprudência prática</small>
+        </a>
+
+        <a class="btn" href="codigo-penal.html" aria-label="Código Penal - resumo">
+          <span>Código Penal</span>
+          <small>Crimes, elementos do tipo, penas e causas de aumento</small>
+        </a>
+
+        <a class="btn" href="lei-de-drogas.html" aria-label="Lei de Drogas - resumo">
+          <span>Lei de Drogas</span>
+          <small>Tráfico, apologia, espécie de condutas e medidas processuais</small>
+        </a>
+
+        <a class="btn" href="direito-administrativo.html" aria-label="Direito Administrativo - resumo">
+          <span>Direito Administrativo</span>
+          <small>Atos administrativos, poderes e responsabilização do Estado</small>
+        </a>
+
+        <a class="btn" href="direito-constitucional.html" aria-label="Direito Constitucional - resumo">
+          <span>Direito Constitucional</span>
+          <small>Estrutura do Estado, controle de constitucionalidade e direitos</small>
+        </a>
+
+        <a class="btn" href="procedimentos-penais.html" aria-label="Procedimentos Penais - resumo">
+          <span>Procedimentos Penais</span>
+          <small>Ritos, fases processuais, medidas cautelares e recursos</small>
+        </a>
+
+        <a class="btn" href="abuso-de-autoridade.html" aria-label="Procedimentos Penais - resumo">
+          <span>Abuso de Autoridade</span>
+          <small>Esta Lei define os crimes de abuso de autoridade, cometidos por agente público</small>
+        </a>
+
+        <a class="btn" href="crimes-de-tortura.html" aria-label="Procedimentos Penais - resumo">
+          <span>Crimes de Tortura</span>
+          <small>Esta Lei Define os crimes de tortura e dá outras providências.</small>
+        </a>
+        
+      </div>
+    </nav>
+
+    <div class="actions">
+      <a class="ghost" href="#">Editar índice</a>
+      <a class="ghost" href="#">Adicionar tópico</a>
+    </div>
+
+    <footer>© PlenAula Concursos — Material feito para revisão rápida e estudo orientado.</footer>
+  </main>
+</body>
+</html>
